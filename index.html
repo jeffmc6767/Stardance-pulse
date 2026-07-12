@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AtmosTab</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="background"></div>
+
+    <div id="rain"></div>
+
+    <div class="card">
+
+        <h1>WeatherTab</h1>
+
+        <div id="time">
+            12:00
+        </div>
+
+        <div id="date">
+            Sunday, July 12
+        </div>
+
+        <div id="temperature">
+            --°C
+        </div>
+
+        <div id="weather">
+            Loading weather...
+        </div>
+
+        <div id="location">
+            Finding location...
+        </div>
+
+        <form action="https://www.google.com/search" method="GET">
+
+            <input
+                type="text"
+                name="q"
+                placeholder="Search Google..."
+                autocomplete="off">
+
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
