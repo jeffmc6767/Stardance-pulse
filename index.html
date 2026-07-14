@@ -1,58 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AtmosTab</title>
-
+    <title>Start Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <div id="background"></div>
-
-    <div id="rain"></div>
-
-    <div class="card">
-
-        <h1>WeatherTab</h1>
-
-        <div id="time">
-            12:00
+    <div class="start-page">
+        
+        <div class="search-section">
+            <form id="search-form" action="https://www.google.com/search" method="GET">
+                <div class="search-wrapper">
+                    <span class="search-icon">🔍</span>
+                    <input 
+                        type="text" 
+                        id="search-input"
+                        name="q" 
+                        placeholder="Search Google" 
+                        autocomplete="off" 
+                        required>
+                    <select id="search-engine">
+                        <option value="https://www.google.com/search" data-name="q">Google</option>
+                        <option value="https://duckduckgo.com/" data-name="q">DuckDuckGo</option>
+                        <option value="https://www.youtube.com/results" data-name="search_query">YouTube</option>
+                    </select>
+                </div>
+            </form>
         </div>
 
-        <div id="date">
-            Sunday, July 12
+        <div class="section">
+            <h2 class="section-title">Bookmarks</h2>
+            <div class="favorites-grid">
+                <a href="https://github.com" target="_blank" class="favorite-item">
+                    <div class="icon-box" style="background-color: #333333;">GH</div>
+                    <span class="favorite-label">GitHub</span>
+                </a>
+                <a href="https://youtube.com" target="_blank" class="favorite-item">
+                    <div class="icon-box" style="background-color: #cc181e;">YT</div>
+                    <span class="favorite-label">YouTube</span>
+                </a>
+                <a href="https://reddit.com" target="_blank" class="favorite-item">
+                    <div class="icon-box" style="background-color: #ff5722;">RD</div>
+                    <span class="favorite-label">Reddit</span>
+                </a>
+                <a href="https://wikipedia.org" target="_blank" class="favorite-item">
+                    <div class="icon-box" style="background-color: #f6f6f6; color: #000000; border: 1px solid #d3d3d3;">W</div>
+                    <span class="favorite-label">Wikipedia</span>
+                </a>
+            </div>
         </div>
 
-        <div id="temperature">
-            --°C
+        <div class="section">
+            <h2 class="section-title">Status</h2>
+            <div class="status-card">
+                <div class="status-header">
+                    <span id="temperature">--°C</span> &bull; <span id="weather">Loading weather...</span>
+                </div>
+                <div class="status-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Local Time</span>
+                        <span id="time" class="detail-val">12:00 PM</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Date</span>
+                        <span id="date" class="detail-val">Sunday, July 12</span>
+                    </div>
+                </div>
+                <button id="clock-toggle">Switch Format</button>
+            </div>
         </div>
-
-        <div id="weather">
-            Loading weather...
-        </div>
-
-        <div id="location">
-            Finding location...
-        </div>
-
-        <form action="https://www.google.com/search" method="GET">
-
-            <input
-                type="text"
-                name="q"
-                placeholder="Search Google..."
-                autocomplete="off">
-
-        </form>
 
     </div>
 
     <script src="script.js"></script>
-
 </body>
-
 </html>
